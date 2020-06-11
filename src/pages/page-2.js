@@ -14,9 +14,9 @@ const SecondPage = ({data}) => (
     <Link to="/">Go back to the homepage</Link>
     {data.allMarkdownRemark.edges.map(post =>(
       <li>
-          <Link 
+          <Link
         key={post.node.id}
-        href={post.node.frontmatter.path}>{post.node.frontmatter.title}</Link>
+        to={post.node.frontmatter.path}>{post.node.frontmatter.title}</Link>
    
       </li>
        ))}
