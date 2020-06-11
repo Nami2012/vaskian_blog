@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
     >
        <h1 style={{ margin: 0 }}> 
         <Link
-          to="/"
+          to="/page-2/"
           style={{
             color: `white`,
             textDecoration: `none`,
