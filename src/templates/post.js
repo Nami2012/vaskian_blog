@@ -10,19 +10,14 @@ import StyledFullBackground from "../components/fullbackground"
 export default function Template({data}){
     const {markdownRemark:post} = data;
     return (
-            
+            <div>
              <div>
-                <div>
+                <h1>
+                    {post.frontmatter.title}</h1>
 
-                    <h1>
-                        {post.frontmatter.title} </h1>
-                        <p>
-                        <div dangerouslySetInnerHTML={{__html:post.html}}/>
-                     </p>
-                </div>
-
-                <Footer/>
+                    <div dangerouslySetInnerHTML={{__html:post.html}}/>
              </div>
+            </div>
         )
 }
 
