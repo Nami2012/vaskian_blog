@@ -13,8 +13,6 @@ const SecondPage = ({data}) => (
     <SEO title="Blogs" />
     <h1 style={{ color:`white`}}>Heres a list of blogs</h1>
     
-    <Link style={{ color:`white`,
-                    textDecoration: `none`}} to="/">Go back to the homepage</Link>
     {data.allMarkdownRemark.edges.map(post =>(
       <li>
           <Link
