@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  
 
   return (
     <>
@@ -33,10 +34,10 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
+          backgroundImage: ' '
         }}
       >
         <main>{children}</main>
-        
         
         </div>
         <Footer/>

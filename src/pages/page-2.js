@@ -2,25 +2,33 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import StyledFullBackground from "../components/fullbackground"
 
-import BlogBox from "../components/blogbox"
 import SEO from "../components/seo"
 
 const SecondPage = ({data}) => (
+  <StyledFullBackground>
+  
   <Layout>
     <SEO title="Blogs" />
-    <h1>Heres a list of blogs</h1>
-    <BlogBox />
-    <Link to="/">Go back to the homepage</Link>
+    <h1 style={{ color:`white`}}>Heres a list of blogs</h1>
+    
+    <Link style={{ color:`white`,
+                    textDecoration: `none`}} to="/">Go back to the homepage</Link>
     {data.allMarkdownRemark.edges.map(post =>(
       <li>
           <Link
-        key={post.node.id}
-        to={post.node.frontmatter.path}>{post.node.frontmatter.title}</Link>
+            key={post.node.id}
+            to={post.node.frontmatter.path}
+            style={{ color:`white`,
+                    textDecoration: `none`}}
+            >{post.node.frontmatter.title}
+          </Link>
    
       </li>
        ))}
   </Layout>
+  </StyledFullBackground>
 )
 
 export const pageQuery = graphql `
